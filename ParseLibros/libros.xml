@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Libros>
+	<Libro>
+		<titulo>La Biblia</titulo>
+		<autor>Jesús</autor>
+		<anyo>1</anyo>
+		<editorial>Iglesia</editorial>
+		<paginas>999</paginas>
+	</Libro>
+	<Libro>
+		<titulo>Decamerón</titulo>
+		<autor>Dante</autor>
+		<anyo>1000</anyo>
+		<editorial>Infernal</editorial>
+		<paginas>666</paginas>
+	</Libro>
+</Libros>
