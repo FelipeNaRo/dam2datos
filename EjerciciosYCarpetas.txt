@@ -1,0 +1,6 @@
+1a y 1b	: GestionFicheros
+1c y 1d	: ProyectoInicial, inicio es interfaz(no usar)
+1e	: Stream_bytes
+1g	: AlmacenLibros
+2a	: ParseLibros
+2b	: MarshallLibros

@@ -15,26 +15,26 @@ import org.xml.sax.SAXException;
 
 public class Parser {
 	
-	private Document doc=null;
-	private ArrayList<Libro> libreria=null;
+	private Document doc=null; //Creamos el fichero document
+	private ArrayList<Libro> libreria=null; //Array de libros a convertir
 	
 	public Parser(){
 		libreria=new ArrayList<Libro>();
 	}
 	public void parseFicheroXml(String fichero){
-	DocumentBuilderFactory dbf= DocumentBuilderFactory.newInstance();
+		// Creamos el fichero document para luego poder convertirlo en XML
+		// Como es  una clase abstracta, se crea u constructor de clase o Factory
+		DocumentBuilderFactory dbf= DocumentBuilderFactory.newInstance();
 	DocumentBuilder db;
 	try {
 		db= dbf.newDocumentBuilder();
 		try {
 			doc=db.parse(fichero);
 		} catch (SAXException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println("Error al acceder al fichero");
 		}
 	} catch (ParserConfigurationException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+		System.err.println("Error al convertir el XML");
 	}
 	}
 	public void parseDocument(){
