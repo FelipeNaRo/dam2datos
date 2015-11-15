@@ -25,8 +25,9 @@ public class Almacen_Libros {
 		case 2: int total=0;
 				System.out.print("¿Cuantos libros vas a guardar?: ");
 				total=s.nextInt();
+				s.reset();
 				System.out.print("¿En que fichero quieres guardar el libro?: ");
-				dato=s.nextLine();
+				dato=confirmarArchivo();
 				ArrayList <Libros> libreria =new ArrayList<Libros>();
 				for (int i=0;i<total;i++){
 					libreria.add(GenerarLibro());	
@@ -132,30 +133,7 @@ public class Almacen_Libros {
 			}
 		}
 	}
-	private void guardarVarios(ArrayList <Libros> lista)
-	{
-		String respuesta="";
-		System.out.print("Vas a guardarlos en un fichero(S) o en varios(OTRA) :");
-		while (respuesta.equals(""))
-		{respuesta=s.nextLine();}
-		if (respuesta.toUpperCase().equals("S"))
-			{
-			respuesta=confirmarArchivo();
-			for (int i=0;i<lista.size();i++)
-				{
-				Libros l= lista.get(i);
-				l.print();
-				guardarLibro(l,respuesta);
-				}
-			}else{for (int i=0;i<lista.size();i++)
-				{
-			    respuesta=confirmarArchivo();
-				Libros l= lista.get(i);
-			    guardarLibro(l,respuesta);
-				}	   
-			
-			}
-	}
+	
 	private String confirmarArchivo(){
 		String con=null;
 		String f=null;
@@ -165,7 +143,7 @@ public class Almacen_Libros {
 		 System.out.println("Confirma el nombre del archivo ");
 		 System.out.println(f+" es correcto?: ");
 		 con=s.nextLine();
-		System.out.println(con);}
+		}
 		 while (!con.toUpperCase().equals("S"));
 		 return f;	
 	}
