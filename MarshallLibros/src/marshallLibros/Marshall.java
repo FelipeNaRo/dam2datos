@@ -34,8 +34,7 @@ public class Marshall {
 			db= dbf.newDocumentBuilder();
 			doc=db.newDocument();
 		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.print("Error en la realización del archivo DOM");
 		}
 		}
 	public void crearArbolDOM(){
@@ -87,11 +86,9 @@ public class Marshall {
 			
 		} catch (TransformerConfigurationException
 				| TransformerFactoryConfigurationError e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.print("Error de creación de la factoria de transformación en XML");
 		} catch (TransformerException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.print("Error de transformación en XML");
 		}
 	}
 }

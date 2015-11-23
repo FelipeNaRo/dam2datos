@@ -94,6 +94,9 @@ public class StreamBytes{
 			// Copia el byte
 				a.copiaBytes(b,salida);
 				cont++;
+				if((cont%10000==0)){
+		System.out.print("\n Tranqui, ya llevamos: "+cont+" bytes");
+				}
 		}
 		
 		

@@ -23,7 +23,7 @@ public class Parser {
 	}
 	public void parseFicheroXml(String fichero){
 		// Creamos el fichero document para luego poder convertirlo en XML
-		// Como es  una clase abstracta, se crea u constructor de clase o Factory
+		// Como es  una clase abstracta, se crea un constructor de clase o Factory
 		DocumentBuilderFactory dbf= DocumentBuilderFactory.newInstance();
 	DocumentBuilder db;
 	try {
